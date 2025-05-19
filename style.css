@@ -66,7 +66,8 @@ body {
 	min-height: 100dvh;
 	position: relative;
 	overflow: hidden;
-	background: linear-gradient(45deg, var(--color-bg1), var(--color-bg2));
+	background: url('assets/Vector.png'), linear-gradient(45deg, var(--color-bg1), var(--color-bg2));
+	background-repeat: no-repeat;
 	top: 0;
 	left: 0;
 
@@ -191,21 +192,6 @@ body {
 		transform: translateY(40px);
 	}
 
-	25% {
-		opacity: 0.25;
-		transform: translateY(20px);
-	}
-
-	50% {
-		opacity: 0.5;
-		transform: translateY(10px);
-	}
-
-	75% {
-		opacity: 0.75;
-		transform: translateY(3px);
-	}
-
 	100% {
 		opacity: 1;
 		transform: translateY(0);
@@ -220,8 +206,22 @@ body {
 	z-index: 99;
 	opacity: 0;
 	transform: translateY(40px);
-	animation: fadeSlideInFromBottom 1.4s ease-out forwards;
-	animation-delay: 0.5s;
+	animation: fadeSlideInFromBottom 1.8s ease-out forwards;
+	animation-delay: 0.3s;
+}
+
+.login-main-from {
+	opacity: 0;
+	transform: translateY(40px);
+	animation: fadeSlideInFromBottom 1.8s ease-out forwards;
+	animation-delay: 0.6s;
+}
+
+.download-m-postbank-image {
+	opacity: 0;
+	transform: translateY(40px);
+	animation: fadeSlideInFromBottom 1.8s ease-out forwards;
+	animation-delay: 0.9s;
 }
 
 .login-container {
@@ -244,6 +244,27 @@ body {
 	justify-content: center;
 	margin: 0rem 2rem;
 	row-gap: 2rem;
+}
+
+.vector-image {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: auto;
+	height: 100%;
+	z-index: 5;
+	pointer-events: none;
+}
+
+.footer-image {
+	width: 100vw;
+	height: 100%;
+}
+
+@media (max-width: 1023px) {
+	.footer-image {
+		display: none;
+	}
 }
 
 @media (max-width: 1024px) {
