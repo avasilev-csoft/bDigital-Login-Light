@@ -18,6 +18,10 @@ body {
 	--blending: hard-light;
 }
 
+.login-wrapper {
+	overflow: hidden;
+}
+
 @keyframes moveInCircle {
 	0% {
 		transform: rotate(0deg);
